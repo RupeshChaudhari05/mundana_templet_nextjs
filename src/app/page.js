@@ -1,95 +1,82 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import HeroPage from './components/HeroPage'
+import AllStories from './components/AllStories';
 
 export default function Home() {
+  const bgImage = {
+    backgroundSize: 'cover',
+    backgroundImage: 'url("./img/demo/1.jpg")',
+    height: '150px',
+    backgroundRepeat: 'no-repeat',
+  };
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <HeroPage />
+
+
+      {/* MAIN */}
+      <div className="container pt-4 pb-4">
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="card border-0 mb-4 box-shadow h-xl-300">
+              <div style={bgImage}></div>
+              <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
+                <h2 className="h4 font-weight-bold">
+                  <a className="text-dark" href="./article.html">Brain Stimulation Relieves Depression Symptoms</a>
+                </h2>
+                <p className="card-text">
+                  Researchers have found an effective target in the brain for electrical stimulation to improve mood in people suffering from depression.
+                </p>
+                <div>
+                  <small className="d-block"><a className="text-muted" href="./author.html">Favid Rick</a></small>
+                  <small className="text-muted">Dec 12 &middot; 5 min read</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="flex-md-row mb-4 box-shadow h-xl-300">
+              <div className="mb-3 d-flex align-items-center">
+                <Image height="80" src="/img/demo/blog4.jpg" width="120" />
+                <div className="pl-3">
+                  <h2 className="mb-2 h6 font-weight-bold">
+                    <a className="text-dark" href="./article.html">Nasa's IceSat space laser makes height maps of Earth</a>
+                  </h2>
+                  <div className="card-text text-muted small">
+                    Jake Bittle in LOVE/HATE
+                  </div>
+                  <small className="text-muted">Dec 12 &middot; 5 min read</small>
+                </div>
+              </div>
+              <div className="mb-3 d-flex align-items-center">
+                <Image height="80" src="/img/demo/blog5.jpg" width="120" />
+                <div className="pl-3">
+                  <h2 className="mb-2 h6 font-weight-bold">
+                    <a className="text-dark" href="./article.html">Underwater museum brings hope to Lake Titicaca</a>
+                  </h2>
+                  <div className="card-text text-muted small">
+                    Jake Bittle in LOVE/HATE
+                  </div>
+                  <small className="text-muted">Dec 12 &middot; 5 min read</small>
+                </div>
+              </div>
+              <div className="mb-3 d-flex align-items-center">
+                <Image height="80" src="/img/demo/blog6.jpg" width="120" />
+                <div className="pl-3">
+                  <h2 className="mb-2 h6 font-weight-bold">
+                    <a className="text-dark" href="./article.html">Sun-skimming probe starts calling home</a>
+                  </h2>
+                  <div className="card-text text-muted small">
+                    Jake Bittle in LOVE/HATE
+                  </div>
+                  <small className="text-muted">Dec 12 &middot; 5 min read</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <AllStories />
+    </>
   )
 }

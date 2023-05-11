@@ -1,7 +1,9 @@
+import Header from './components/Header'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import './css/main.css'
+import Footer from './components/Footer'
+import Head from 'next/head'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +13,27 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,600,700" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+        <script
+          src="https://code.jquery.com/jquery-3.6.0.min.js"
+          integrity="sha384-niP+sH1E2+Tvlk6vfeucbYgsb3fu6R6DMpZt3NI3vKoAqG1r6rs7F7UNk7woHaaV"
+          crossOrigin="anonymous"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
+          integrity="sha384-F+8FzH0DNXeLy6GxpxX2pq3wua6P/ScnMBt8dIEwGP85DqAc6NCIvERGGfFdqoZI"
+          crossOrigin="anonymous"
+        ></script>
+
+      </Head>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
