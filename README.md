@@ -1,9 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Demo images
-screenshot-mundana-category.png
-screenshot-mundana.png
-screenshot-mundana-article.png
+![screenshot-mundana-category](https://github.com/RupeshChaudhari05/mundana_templet_nextjs/assets/10254568/d1a9211c-5542-4ef3-90ff-2a9d3fff1af0)
+
 
 ## Getting Started
 
