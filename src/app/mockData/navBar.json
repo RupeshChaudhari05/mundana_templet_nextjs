@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Intro",
+    "url": "intro",
+    "badge":"No"
+  },
+  {
+    "title": "Culture",
+    "url": "Culture",
+    "badge":"No"
+  },
+  {
+    "title": "Tech",
+    "url": "tech",
+    "badge":"No"
+  },
+  {
+    "title": "Politics",
+    "url": "politics",
+    "badge":"No"
+  },
+  {
+    "title": "Health",
+    "url": "health",
+    "badge":"No"
+  },
+  {
+    "title": "Collections",
+    "url": "collections",
+    "badge":"No"
+  },
+  {
+    "title": "About",
+    "url": "aboutus",
+    "badge":"No"
+  },
+  {
+    "title": "Template",
+    "url": "template",
+    "badge":"Yes"
+  }
+]

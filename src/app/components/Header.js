@@ -1,12 +1,13 @@
 import React from 'react'
+import navBar from "../mockData/navBar.json";
+import Link from 'next/link';
+import { YES } from '../util/Constant';
 
 const Header = () => {
 
   return (
     <>
-
       {/* NAVBAR */}
-
       <nav className="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div className="container">
           <a className="navbar-brand" href="/"><strong>Mundana</strong></a>
@@ -15,30 +16,19 @@ const Header = () => {
           </button>
           <div className="navbar-collapse collapse" id="navbarColor02">
             <ul className="navbar-nav mr-auto d-flex align-items-center">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link" href="/">Intro <span className="sr-only">(current)</span></a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="./article.html">Culture</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="./article.html">Tech</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="./article.html">Politics</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="./article.html">Health</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="./article.html">Collections</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/aboutus">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="./docs.html">Template <span className="badge badge-secondary">docs</span></a>
-              </li>
+              </li> */}
+
+              {navBar.map((item, index) => {
+                return <>
+                  <li className="nav-item" key={index}>
+                    <Link className="nav-link" href={item.url}>{item.title}
+                      {item.badge === YES ? <span className="badge badge-secondary">docs</span> : ""}
+                    </Link>
+                  </li>
+                </>
+              })}
             </ul>
             <ul className="navbar-nav ml-auto d-flex align-items-center">
               <li className="nav-item highlight">
