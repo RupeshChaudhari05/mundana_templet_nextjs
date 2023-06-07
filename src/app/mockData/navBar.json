@@ -1,42 +1,42 @@
 [
   {
     "title": "Intro",
-    "url": "intro",
+    "url": "category/intro",
     "badge":"No"
   },
   {
     "title": "Culture",
-    "url": "culture",
+    "url": "category/culture",
     "badge":"No"
   },
   {
     "title": "Tech",
-    "url": "tech",
+    "url": "category/tech",
     "badge":"No"
   },
   {
     "title": "Politics",
-    "url": "politics",
+    "url": "category/politics",
     "badge":"No"
   },
   {
     "title": "Health",
-    "url": "health",
+    "url": "category/health",
     "badge":"No"
   },
   {
     "title": "Collections",
-    "url": "collections",
+    "url": "category/collections",
     "badge":"No"
   },
   {
     "title": "About",
-    "url": "aboutus",
+    "url": "category/aboutus",
     "badge":"No"
   },
   {
     "title": "Template",
-    "url": "template",
+    "url": "category/template",
     "badge":"Yes"
   }
 ]

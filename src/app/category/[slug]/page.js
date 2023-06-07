@@ -1,21 +1,21 @@
 import React from 'react'
-import Populer from '../components/Populer';
-import popular from "../mockData/Popular.json";
-import allStories from "../mockData/allStores.json";
-import AllStories from '../components/AllStories';
-import BecomeMember from "../components/BecomeMember";
-import { imageSetupInBaground } from '@/app/util';
+import Populer from '../../components/Populer';
+import popular from "../../mockData/Popular.json";
+import allStories from "../../mockData/allStores.json";
+import AllStories from '../../components/AllStories';
+import BecomeMember from "../../components/BecomeMember";
+import { capitalizeFirstLetter, imageSetupInBaground } from '@/app/util';
 // import { useRouter } from 'next/router';
 
+const page = ({ params }) => {
 
-const page = () => {
   return (
     <>
       {/* Main */}
       <div className="container mt-5 mb-5">
         <div className="row">
           <div className="col-md-8">
-            <h5 className="font-weight-bold spanborder"><span>Featured in Science</span></h5>
+            <h5 className="font-weight-bold spanborder"><span>Featured in {capitalizeFirstLetter(params.slug)}</span></h5>
             <div className="card border-0 mb-5 box-shadow">
               <div style={imageSetupInBaground("./img/demo/1.jpg")}>
               </div>

@@ -7,3 +7,7 @@ export const imageSetupInBaground = (url) => {
     backgroundRepeat: 'no-repeat',
   };
 }
+
+export const capitalizeFirstLetter = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
